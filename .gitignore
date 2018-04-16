@@ -22,6 +22,8 @@ tags
 /Gemfile.lock
 test/tmp/
 vendor/
+cache/*
+log/*
 /exec
 .ruby-bundle
 
