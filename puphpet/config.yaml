@@ -151,10 +151,10 @@ nginx:
     upstreams: {  }
     vhosts:
         vhost1:
-            server_name: prova.dev
+            server_name: prova.test
             server_aliases:
-                - prova.dev
-                - www.prova.dev
+                - prova.test
+                - www.prova.test
             www_root: /var/www/awesome/prova-symfony/public
             listen_port: '80'
             client_max_body_size: 1m
@@ -205,10 +205,10 @@ apache:
         - rewrite
     vhosts:
         vhost1:
-            servername: prova.dev
+            servername: prova.test
             serveraliases:
-                - prova.dev
-                - www.prova.dev
+                - prova.test
+                - www.prova.test
             docroot: /var/www/awesome/prova-symfony/public
             port: '80'
             setenvif:
