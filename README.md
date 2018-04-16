@@ -7,4 +7,5 @@
 ```$ sudo vim /etc/hosts ```
 1. Adicione o codigo ao final do arquivo 
 ```$ 192.168.56.101  prova.dev```
+1. Apague a pasta prova-symfony gerada dentro de ```/awesome```
 

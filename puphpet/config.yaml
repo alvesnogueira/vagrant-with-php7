@@ -66,7 +66,7 @@ vagrantfile:
                   owner: vagrant
                   group: vagrant
                   source: ./
-                  target: /var/www/awesome/website-skeleton/var/
+                  target: /var/www/awesome/prova-symfony/var/
                   sync_type: default
                   smb:
                       smb_host: ''
@@ -155,13 +155,13 @@ nginx:
             server_aliases:
                 - prova.dev
                 - www.prova.dev
-            www_root: /var/www/awesome/website-skeleton/public
+            www_root: /var/www/awesome/prova-symfony/public
             listen_port: '80'
             client_max_body_size: 1m
             ssl: '0'
             locations:
                 php_html:
-                    www_root: /var/www/awesome/website-skeleton/public
+                    www_root: /var/www/awesome/prova-symfony/public
                     location: /
                     autoindex: 'off'
                     internal: 'false'
@@ -173,7 +173,7 @@ nginx:
                         - $uri/
                         - /index.php$is_args$args
                 php_php:
-                    www_root: /var/www/awesome/website-skeleton/public
+                    www_root: /var/www/awesome/prova-symfony/public
                     location: '~ \.php$'
                     autoindex: 'off'
                     internal: 'false'
@@ -209,7 +209,7 @@ apache:
             serveraliases:
                 - prova.dev
                 - www.prova.dev
-            docroot: /var/www/awesome/website-skeleton/public
+            docroot: /var/www/awesome/prova-symfony/public
             port: '80'
             setenvif:
                 - 'Authorization "(.*)" HTTP_AUTHORIZATION=$1'
@@ -223,7 +223,7 @@ apache:
             directories:
                 php_html:
                     provider: directory
-                    path: /var/www/awesome/website-skeleton/public
+                    path: /var/www/awesome/prova-symfony/public
                     directoryindex: 'index.php index.html'
                     options:
                         - Indexes
